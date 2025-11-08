@@ -12,6 +12,12 @@ class Task:
         self.title = title
         self.assigned_to = assigned_to
         self.status = status
+    
+    def mark_complete(self):
+        """
+        Mark this task as complete.
+        """
+        self.status = "complete"
 
     def __str__(self):
         return f"Task(title='{self.title}', status='{self.status}', assigned_to='{self.assigned_to}')"
