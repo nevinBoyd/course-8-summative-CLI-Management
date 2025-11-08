@@ -4,11 +4,11 @@ class Task:
 
     Attributes:
         title (str): Name of the task.
-        status (str): Either "pending" or "complete".
+        status (str): Either "incomplete" or "complete".
         assigned_to (str|None): Name of the user assigned, optional.
     """
 
-    def __init__(self, title: str, assigned_to: str = None, status: str = "pending"):
+    def __init__(self, title: str, assigned_to: str = None, status: str = "incomplete"):
         self.title = title
         self.assigned_to = assigned_to
         self.status = status
