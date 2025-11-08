@@ -13,5 +13,17 @@ class User:
         self.email = email
         self.projects = []  # One-to-many: User -> Projects
 
+    def add_project(self, project):
+        """
+        Add a Project instance to this user's project list.
+        """
+        self.projects.append(project)
+
+    def list_projects(self):
+        """
+        Return a list of the user's projects.
+        """
+        return self.projects
+    
     def __str__(self):
         return f"User(name='{self.name}', email='{self.email}')"
